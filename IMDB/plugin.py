@@ -40,11 +40,11 @@ class IMDB(callbacks.Plugin):
         if query[-4:].isdigit():
             encoded_query = quote_plus(query[0:-4])
             encoded_query_year = quote_plus(query[-4:])
-            omdb_url = "http://www.omdbapi.com/?t=%s&y=%s&plot=short&r=json&tomatoes=true&apikey=xxxxxxxx" % (encoded_query, encoded_query_year)
+            omdb_url = "http://www.omdbapi.com/?t=%s&y=%s&plot=short&r=json&tomatoes=true&apikey=6b285d64" % (encoded_query, encoded_query_year)
             self.log.info("IMDB: Check for %s year %s" % (query[0:-4], query[-4:]))
         else:
             encoded_query = quote_plus(query)
-            omdb_url = "http://www.omdbapi.com/?t=%s&y=&plot=short&r=json&tomatoes=true&apikey=xxxxxxxx" % (encoded_query)
+            omdb_url = "http://www.omdbapi.com/?t=%s&y=&plot=short&r=json&tomatoes=true&apikey=6b285d64" % (encoded_query)
 
         channel = msg.args[0]
         result = None
